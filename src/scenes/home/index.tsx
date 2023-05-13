@@ -1,6 +1,8 @@
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { motion } from "framer-motion";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { ArrowDownIcon } from "@heroicons/react/24/solid";
 
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
@@ -17,7 +19,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
             {/* Main Header */}
             <div className="z-10 mt-32 flex justify-center">
-                
+
                 <motion.div
                     className="md:-mt-20"
                     initial="hidden"
@@ -28,8 +30,13 @@ const Home = ({ setSelectedPage }: Props) => {
                         hidden: { opacity: 0, },
                         visible: { opacity: 1, },
                     }}>
-                    <p className="mt-8 text-2xl">
-                        Page under construction...
+                    <p className="mt-8 text-4xl">
+                        清心明志，
+                        從容求真。
+                    </p>
+                    <p className="mt-8 text-4xl">
+                        心領神會，
+                        大道至簡。
                     </p>
                 </motion.div>
 
@@ -38,11 +45,14 @@ const Home = ({ setSelectedPage }: Props) => {
 
         {/* Sponsors */}
         {isAboveMediumScreen && (
-            <div className="h-[150px] w-full bg-primary-100 py-10">
-                <div className="mx-auto w-5/6">
-                    <div className="flex w-3/5 items-center justify-between gap-8">
-                        {/* <p>Sponsors</p> */}
-
+            <div className="h-[150px] w-full bg-primary-100 py-10 flex items-center">
+                <div className="mx-auto">
+                    <div className="flex items-center justify-between gap-8">
+                        <AnchorLink className="text-sm font-bold text-primary-500 hover:text-secondary-500"
+                            onClick={() => { setSelectedPage(SelectedPage.Skills) }}
+                            href={`#${SelectedPage.Skills}`}>
+                            <ArrowDownIcon className="h-6 w-6 text-primary-500" />
+                        </AnchorLink>
                     </div>
                 </div>
             </div>)}

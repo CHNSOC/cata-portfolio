@@ -18,15 +18,15 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
     const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
     const [isMenuToggled, setIsMenuToggled] = useState<Boolean>(false);
-   
+
     return (
         <nav>
-            <div className={`fixed top-0 z-30 w-full py-6 ${flexBetween} ${navbarBackground}`}>
+            <div className={`border-b-2 bg-gray-100 border-b-slate-300 fixed top-0 z-30 w-full py-6 ${flexBetween} ${navbarBackground}`}>
                 <div className={`${flexBetween} mx-auto w-full`}>
-                    <div className={`flex justify-end  w-full gap-16 mr-12`}>
+                    <div className={`flex justify-end w-full gap-16 mr-12`}>
                         {isAboveMediumScreen ? (
                             <div className={`items-center flex justify-center w-full`}>
-                                <div className={`${flexBetween} gap-16 text-sm`}>
+                                <div className={`${flexBetween} gap-20 text-sm`}>
                                     <Link
                                         page="Home"
                                         selectedPage={selectedPage}
@@ -50,12 +50,15 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                                 </div>
                             </div>
                         ) : (
-                            <button
-                                className="rounded-full bg-secondary-500 p-2"
-                                onClick={() => setIsMenuToggled(!isMenuToggled)}
-                            >
-                                <Bars3Icon className="h-8 w-8 text-black" />
-                            </button>
+                            <div>
+                                <div  className=" justify-start">Test</div>
+                                <button
+                                    className="rounded-full bg-secondary-500 p-2"
+                                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                                >
+                                    <Bars3Icon className="h-8 w-8 text-black" />
+                                </button> 
+                            </div>
                         )}
                     </div>
                 </div>
@@ -67,12 +70,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     <motion.div className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-white bg-opacity-75 drop-shadow-xl"
                         key="sidebar"
                         transition={{ duration: 0.5 }}
-                        initial={{x:100, opacity: 0 }}
-                        animate={{x:0, opacity: 1 }}
-                        exit={{x:100, opacity: 0 }}
+                        initial={{ x: 100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        exit={{ x: 100, opacity: 0 }}
                     >
                         {/* Close Icon */}
-                        <div className="flex justify-end p-12 mt-4 mr-2">
+                        <div className="flex m-auto justify-end py-8 pr-14">
                             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                                 <XMarkIcon className="h-8 w-8 opacity-0" />
                             </button>

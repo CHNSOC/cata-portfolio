@@ -1,7 +1,13 @@
 import Navbar from "@/scenes/navbar";
 import { useState, useEffect } from "react";
 import { SelectedPage } from "@/shared/types";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "@/scenes/home";
+
+// For CSS testing
+
+import Playfield from "@/scenes/playfield";
+import ErrorPage from "./scenes/utility/ErrorPage";
 
 
 function App() {
@@ -23,12 +29,21 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   });
   return (
-    <div className="app bg-gray-100">
-      <Navbar isTopOfPage={isTopOfPage}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage} />
-        <Home setSelectedPage={setSelectedPage}/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <div className="app bg-gray-100">
+            <Navbar isTopOfPage={isTopOfPage}
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage} />
+            <Home setSelectedPage={setSelectedPage} />
+          </div>
+        } />
+        <Route path="/playfield" element={<Playfield />} />
+        <Route path="*" element={<ErrorPage />} />
+
+      </Routes>
+    </Router>
   )
 }
 
