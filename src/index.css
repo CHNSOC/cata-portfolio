@@ -16,3 +16,7 @@ body,
 .playground{
     font-family: "Montserrat", sans-serif;
 }
+
+.idiom{
+    writing-mode: vertical-rl
+}

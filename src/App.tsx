@@ -6,6 +6,7 @@ import Home from "@/scenes/home";
 
 // For CSS testing
 
+import Skills from "./scenes/skills/skills";
 import Playfield from "@/scenes/playfield";
 import ErrorPage from "./scenes/utility/ErrorPage";
 
@@ -37,6 +38,7 @@ function App() {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} />
             <Home setSelectedPage={setSelectedPage} />
+            <Skills setSelectedPage={setSelectedPage}/>
           </div>
         } />
         <Route path="/playfield" element={<Playfield />} />

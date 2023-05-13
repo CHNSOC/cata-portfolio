@@ -51,7 +51,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                             </div>
                         ) : (
                             <div>
-                                <div  className=" justify-start">Test</div>
                                 <button
                                     className="rounded-full bg-secondary-500 p-2"
                                     onClick={() => setIsMenuToggled(!isMenuToggled)}
@@ -67,7 +66,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             {/* Mobile Modal */}
             <AnimatePresence>
                 {!isAboveMediumScreen && isMenuToggled && (
-                    <motion.div className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-white bg-opacity-75 drop-shadow-xl"
+                    <motion.div className="fixed bottom-0 right-0 z-40 h-full w-[200px] bg-white bg-opacity-75 drop-shadow-xl"
                         key="sidebar"
                         transition={{ duration: 0.5 }}
                         initial={{ x: 100, opacity: 0 }}
