@@ -21,9 +21,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
     return (
         <nav>
-            <div className={` bg-gray-100 border-b-slate-300 fixed top-0 z-30 w-full py-4 ${flexBetween} ${navbarBackground}`}>
+            <div className={`bg-gray-100 border-b-slate-300 fixed top-0 z-30 w-full py-4 ${flexBetween} ${navbarBackground}`}>
                 <div className={`${flexBetween} mx-auto w-full`}>
-                    <div className={`flex justify-end w-full gap-16 mr-12`}>
+                    <div className={`flex justify-end w-full gap-16`}>
                         {isAboveMediumScreen ? (
                             <div className={`items-center flex justify-center w-full`}>
                                 <div className={`${flexBetween} gap-20 text-sm`}>
@@ -39,11 +39,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                                     />
                                     <Link
                                         page="About Me"
-                                        selectedPage={selectedPage}
-                                        setSelectedPage={setSelectedPage}
-                                    />
-                                    <Link
-                                        page="Contact"
                                         selectedPage={selectedPage}
                                         setSelectedPage={setSelectedPage}
                                     />
@@ -74,7 +69,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         exit={{ x: 100, opacity: 0 }}
                     >
                         {/* Close Icon */}
-                        <div className="flex m-auto justify-end py-4 pr-12">
+                        <div className="flex m-auto justify-end py-4">
                             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                                 <XMarkIcon className="h-8 w-8 opacity-0" />
                             </button>
@@ -94,11 +89,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                             />
                             <Link
                                 page="About Me"
-                                selectedPage={selectedPage}
-                                setSelectedPage={setSelectedPage}
-                            />
-                            <Link
-                                page="Contact"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
                             />

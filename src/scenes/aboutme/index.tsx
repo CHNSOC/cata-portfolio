@@ -64,11 +64,11 @@ const AboutMe = ({ setSelectedPage }: Props) => {
     };
 
     return (
-        <section id="aboutme" className="gap-16 py-16 h-full md:pb-0">
+        <section id="aboutme" className="gap-16 h-auto min-h-full pt-24">
             <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.AboutMe)}></motion.div >
 
             <motion.div
-                className="flex justify-center items-center h-24 text-center text-2xl md:mt-24 mt-16"
+                className="flex justify-center items-center h-24 text-center text-2xl"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -86,7 +86,7 @@ const AboutMe = ({ setSelectedPage }: Props) => {
             </motion.div>
 
             <motion.div
-                className="flex justify-center items-center space-x-3 mt-2"
+                className="flex justify-center items-center space-x-3 mt-2 md:mb-6"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -96,12 +96,12 @@ const AboutMe = ({ setSelectedPage }: Props) => {
                     hidden: { opacity: 0, },
                     visible: { opacity: 1, },
                 }}>
-                <button className={`${language === Language.ENG ? ' border-gray-500 md:border-b-2' : ''} transition duration-500`} onClick={() => setLanguage(Language.ENG)}>ENG</button>
-                <button className={`${language === Language.CHS ? ' border-gray-500 md:border-b-2 font-nssc' : 'font-nssc'} transition duration-500`} onClick={() => setLanguage(Language.CHS)}>简</button>
-                <button className={`${language === Language.CHT ? ' border-gray-500 md:border-b-2' : ''} transition duration-500`} onClick={() => setLanguage(Language.CHT)}>繁</button>
+                <button className={`${language === Language.ENG ? ' border-gray-500 md:border-b-2' : ''} transition duration-500`} onClick={() => setLanguage(Language.ENG)}>English</button>
+                <button className={`${language === Language.CHS ? ' border-gray-500 md:border-b-2 font-nssc' : 'font-nssc'} transition duration-500`} onClick={() => setLanguage(Language.CHS)}>简体中文</button>
+                <button className={`${language === Language.CHT ? ' border-gray-500 md:border-b-2' : ''} transition duration-500`} onClick={() => setLanguage(Language.CHT)}>繁體中文</button>
             </motion.div>
 
-            <div className="md:px-16 px-8 md:mt-24 mt-16">
+            <div className="md:px-16 px-8 md:py-24 py-16">
                 <div className="mx-auto max-w-7xl">
                     <article>
                         <div>
@@ -112,6 +112,7 @@ const AboutMe = ({ setSelectedPage }: Props) => {
                     </article>
                 </div>
             </div>
+            
         </section>
     )
 }

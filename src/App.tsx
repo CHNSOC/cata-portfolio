@@ -6,10 +6,11 @@ import Home from "@/scenes/home";
 
 // For CSS testing
 
-import Skills from "./scenes/skills/skills";
+import Skills from "@/scenes/skills/skills";
 import Playfield from "@/scenes/playfield";
-import ErrorPage from "./scenes/utility/ErrorPage";
-import AboutMe from "./scenes/aboutme";
+import ErrorPage from "@/scenes/utility/ErrorPage";
+import AboutMe from "@/scenes/aboutme";
+import Footer from "@/scenes/footer/Footer";
 
 
 function App() {
@@ -39,8 +40,9 @@ function App() {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} />
             <Home setSelectedPage={setSelectedPage} />
-            <Skills setSelectedPage={setSelectedPage}/>
-            <AboutMe setSelectedPage={setSelectedPage}/>
+            <Skills setSelectedPage={setSelectedPage} />
+            <AboutMe setSelectedPage={setSelectedPage} />
+            <Footer/>
           </div>
         } />
         <Route path="/playfield" element={<Playfield />} />
