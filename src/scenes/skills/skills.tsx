@@ -63,7 +63,7 @@ const container = {
 function Skills({ setSelectedPage }: Props) {
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="skills" className="md:h-full h-auto py-32">
+    <section id="skills" className="md:h-full h-auto py-32 px-12">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
       >
@@ -101,18 +101,13 @@ function Skills({ setSelectedPage }: Props) {
           setSelectedPage={setSelectedPage} />))}
       </motion.div>
       ) : (
-        <motion.div className="flex-col items-center justify-center w-full"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={container}
-        >
+        <div className="flex-col items-center justify-center w-full">
           {skillCards.map((skillcard: SkillCardType) => (<SkillCard key={skillcard.title}
             icon={skillcard.icon}
             title={skillcard.title}
             description={skillcard.description}
             setSelectedPage={setSelectedPage} />))}
-        </motion.div>
+        </div>
       )}
 
     </section>
