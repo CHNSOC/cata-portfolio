@@ -16,12 +16,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
     const flexBetween = "flex justify-between items-center";
     const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
-    const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
+    const navbarBackground = isTopOfPage ? "" : "border-b-2 bg-primary-100 drop-shadow";
     const [isMenuToggled, setIsMenuToggled] = useState<Boolean>(false);
 
     return (
         <nav>
-            <div className={`border-b-2 bg-gray-100 border-b-slate-300 fixed top-0 z-30 w-full py-6 ${flexBetween} ${navbarBackground}`}>
+            <div className={` bg-gray-100 border-b-slate-300 fixed top-0 z-30 w-full py-4 ${flexBetween} ${navbarBackground}`}>
                 <div className={`${flexBetween} mx-auto w-full`}>
                     <div className={`flex justify-end w-full gap-16 mr-12`}>
                         {isAboveMediumScreen ? (
@@ -52,10 +52,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         ) : (
                             <div>
                                 <button
-                                    className="rounded-full bg-secondary-500 p-2"
+                                    className="flex"
                                     onClick={() => setIsMenuToggled(!isMenuToggled)}
                                 >
-                                    <Bars3Icon className="h-8 w-8 text-black" />
+                                    <Bars3Icon className="h- w-8 text-black" />
                                 </button> 
                             </div>
                         )}
@@ -74,7 +74,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         exit={{ x: 100, opacity: 0 }}
                     >
                         {/* Close Icon */}
-                        <div className="flex m-auto justify-end py-8 pr-14">
+                        <div className="flex m-auto justify-end py-4 pr-12">
                             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                                 <XMarkIcon className="h-8 w-8 opacity-0" />
                             </button>

@@ -13,7 +13,7 @@ function SkillCard({ icon, title, description, setSelectedPage }: Props) {
         <motion.div
             
             className={isAboveMediumScreen? ('flex flex-col px-5 py-16 text-center md:max-w-none w-2/5 h-2/3 border-2 border-gray-400') 
-            : ('flex-col text-center px-5 py-16 border-2 max-w-md mx-auto space-y-5 my-8 first:mt-12' )}
+            : ('flex-col text-center px-5 py-16 border-2 max-w-md md:mx-auto mx-12 space-y-5 my-8 first:mt-12' )}
             variants={childVariant}
         >
             <div className='mb-4 flex justify-center'>

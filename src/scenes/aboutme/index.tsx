@@ -20,7 +20,7 @@ const AboutMe = ({ setSelectedPage }: Props) => {
                 <div className="flex justify-center text-center items-center w-full h-full border-b-2 border-t-2 py-3">
                     <p className="italic text-lg">"The young boy finally lifted his gaze. Before him, the enclosing walls faded into the background, giving way to a radiant expanse of stars."</p>
                 </div>
-                <div className=" mt-12 flex:col md:space-y-8 space-y-4 justify-left w-full h-full tracking-wide leading-relaxed">
+                <div className=" mt-12 flex:col md:space-y-8 space-y-4 justify-left w-full h-full text-left tracking-wide leading-relaxed">
                     <p className="indent-10">Welcome to my portfolio page. It's a pleasure to make your acquaintance here.</p>
                     <p className="indent-10">If I were, to sum up my identity in a nutshell, I would gladly label myself as a software engineer with a deep yearning for the beauty that life offers.
                      Drawing inspiration from the <i>"Principles,"</i> I'm a dedicated growth seeker, constantly striving for improvement and refinement.</p>
@@ -101,7 +101,7 @@ const AboutMe = ({ setSelectedPage }: Props) => {
                 <button className={`${language === Language.CHT ? ' border-gray-500 md:border-b-2' : ''} transition duration-500`} onClick={() => setLanguage(Language.CHT)}>繁</button>
             </motion.div>
 
-            <div className="px-16 md:mt-24 mt-16">
+            <div className="md:px-16 px-8 md:mt-24 mt-16">
                 <div className="mx-auto max-w-7xl">
                     <article>
                         <div>
