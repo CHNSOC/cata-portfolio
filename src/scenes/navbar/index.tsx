@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { SelectedPage } from "@/shared/types";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/icon2.png"
 
 import Link from "../Link";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -23,7 +24,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         <nav>
             <div className={`bg-gray-100 border-b-slate-300 fixed top-0 z-30 w-full py-4 ${flexBetween} ${navbarBackground}`}>
                 <div className={`${flexBetween} mx-auto w-full`}>
-                    <div className={`flex justify-end w-full gap-16`}>
+                    <div className={`flex justify-end w-full gap-16 px-8`}>
                         {isAboveMediumScreen ? (
                             <div className={`items-center flex justify-center w-full`}>
                                 <div className={`${flexBetween} gap-20 text-sm`}>
@@ -45,13 +46,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                                 </div>
                             </div>
                         ) : (
-                            <div>
+                            <div className=" flex justify-between w-full">
+                                <div className="flex items-center">
+                                    <img src={logo} alt="logo" className="w-6 h-6"/>
+                                    <p className="font-sans-serif pl-2 tracking-wider text-gray-600">Catastasis</p>
+                                </div>
                                 <button
                                     className="flex"
                                     onClick={() => setIsMenuToggled(!isMenuToggled)}
                                 >
                                     <Bars3Icon className="h- w-8 text-black" />
-                                </button> 
+                                </button>
                             </div>
                         )}
                     </div>
@@ -69,7 +74,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         exit={{ x: 100, opacity: 0 }}
                     >
                         {/* Close Icon */}
-                        <div className="flex m-auto justify-end py-4">
+                        <div className="flex m-auto justify-end py-4 pr-8">
+                            <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                                <XMarkIcon className="h-8 w-8 opacity-0" />
+                            </button>
+                        </div>
+                        <div className="flex m-auto justify-end py-4 pr-8">
                             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                                 <XMarkIcon className="h-8 w-8 opacity-0" />
                             </button>
