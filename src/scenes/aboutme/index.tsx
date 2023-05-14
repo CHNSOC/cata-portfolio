@@ -38,7 +38,7 @@ const AboutMe = ({ setSelectedPage }: Props) => {
                 </div>
                 <div className=" mt-12 flex:col md:space-y-8 space-y-4 justify-left w-full h-full tracking-wide leading-relaxed">
                     <p className="indent-10">欢迎来到我的个人页面，很高兴在这里认识你。</p>
-                    <p className="indent-10">如果要用一句话来形容我自己，我愿意称自己为一位对生命中美好事物充满向往的一位软件工程师。
+                    <p className="indent-10">如果要用一句话来形容我自己，我愿意称自己为一位对生命中美好事物充满向往的软件工程师。
                     若按照《原则》这本书里的话来讲，则是一位追求终生成长的修行者。</p>
                     <p className="indent-10">我相信，黑客与画家的处事法则适用于生活中的点点滴滴。每一行代码都是一幅画作中不可或缺的笔触，每一行乐句都是一段程序中高效简洁的逻辑。
                     在这个充满混乱与不确定，技术转折即将到来的新世界里，我专注着做好眼前重要的事情，同时也欢迎难以捉摸，变化莫测的未来。 </p>
@@ -53,7 +53,7 @@ const AboutMe = ({ setSelectedPage }: Props) => {
                 </div>
                 <div className=" mt-12 flex:col md:space-y-8 space-y-4 justify-left w-full h-full tracking-wide leading-relaxed">
                     <p className="indent-10">歡迎來到我的個人頁面，很高興在這裡認識你。</p>
-                    <p className="indent-10">如果要用一句話來形容我自己，我願意稱自己為一位對生命中美好事物充滿嚮往的一位軟件工程師。
+                    <p className="indent-10">如果要用一句話來形容我自己，我願意稱自己為一位對生命中美好事物充滿嚮往的軟件工程師。
                     若按照《原則》這本書裡的話來講，則是一位追求終生成長的修行者。</p>
                     <p className="indent-10">我相信，黑客與畫家的處事法則適用於生活中的點點滴滴。每一行代碼都是一幅畫作中不可或缺的筆觸，每一行樂句都是一段程序中高效簡潔的邏輯。
                     在這個充滿混亂與不確定，技術轉折即將到來的新世界裡，我專注著做好眼前重要的事情，同時也歡迎難以捉摸，變化莫測的未來。</p>
