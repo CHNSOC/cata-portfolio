@@ -9,6 +9,7 @@ import Home from "@/scenes/home";
 import Skills from "./scenes/skills/skills";
 import Playfield from "@/scenes/playfield";
 import ErrorPage from "./scenes/utility/ErrorPage";
+import AboutMe from "./scenes/aboutme";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
               setSelectedPage={setSelectedPage} />
             <Home setSelectedPage={setSelectedPage} />
             <Skills setSelectedPage={setSelectedPage}/>
+            <AboutMe setSelectedPage={setSelectedPage}/>
           </div>
         } />
         <Route path="/playfield" element={<Playfield />} />

@@ -10,6 +10,7 @@ export default {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         nstc: ["Noto Serif TC", "sans-serif"],
+        nssc: ["Noto Serif SC", "sans-serif"],
       },
     },
     screens: {

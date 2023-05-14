@@ -1,3 +1,4 @@
+import useMediaQuery from '@/hooks/useMediaQuery'
 import { SelectedPage } from '@/shared/types'
 import { motion } from 'framer-motion'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
@@ -7,9 +8,12 @@ const childVariant = { hidden: { opacity: 0, scale: 0.9 }, visible: { opacity: 1
 type Props = { icon?: JSX.Element, image?: JSX.Element, title: string, description: JSX.Element, setSelectedPage: (value: SelectedPage) => void }
 
 function SkillCard({ icon, title, description, setSelectedPage }: Props) {
+    const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
     return (
         <motion.div
-            className='flex flex-col px-5 py-16 text-center w-1/4 h-2/3 border-2 border-gray-400'
+            
+            className={isAboveMediumScreen? ('flex flex-col px-5 py-16 text-center md:max-w-none w-2/5 h-2/3 border-2 border-gray-400') 
+            : ('flex-col text-center px-5 py-16 border-2 max-w-md mx-auto space-y-5 my-8 first:mt-12' )}
             variants={childVariant}
         >
             <div className='mb-4 flex justify-center'>

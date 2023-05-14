@@ -59,7 +59,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 </div>
             </motion.div>
         </AnimatePresence>
-        {/* Sponsors */}
+        {/* Nextpage Arrow */}
         {isAboveMediumScreen && (
             <div className="h-[150px] w-full bg-primary-100 bg-opacity-0 py-10 flex items-center">
                 <div className="mx-auto">
