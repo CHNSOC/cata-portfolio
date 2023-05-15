@@ -9,7 +9,7 @@ type Props = {
 function Experiences({ setSelectedPage }: Props) {
 
   return (
-    <section id="experiences" style={{ backgroundImage: `url(${bgImg})` }} className={`min-h-full bg-cover md:bg-center bg-top py-16 flex flex-col`}>
+    <section id="experiences" style={{ backgroundImage: `url(${bgImg})` }} className={`min-h-full bg-cover md:bg-center bg-top py-16 flex flex-col min-w-[320px]`}>
       <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Experiences)}></motion.div >
       {/* Header */}
       <motion.div
@@ -39,7 +39,7 @@ function Experiences({ setSelectedPage }: Props) {
       {/* Content */}
       <div className="flex-1 mx-auto my-12 justify-center items-center py-auto">
         <motion.div
-          className=" py-12 flex flex-col justify-center items-center h-auto text-gray-300 text-base"
+          className=" py-12 flex flex-col justify-center items-center h-auto text-gray-300 md:text-base text-xs"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -50,7 +50,7 @@ function Experiences({ setSelectedPage }: Props) {
           }}
         >
           {/* Current */}
-          <div className="my-8"><p className="text-lg">{">"} The Future Awaits <motion.div
+          <div className="my-8"><p className="md:text-lg text-sm">{">"} The Future Awaits <motion.div
           className="inline"
             initial={{ opacity:1 }}
             animate={{ opacity:0 }}
@@ -58,7 +58,7 @@ function Experiences({ setSelectedPage }: Props) {
           {/* Panels and Splitter */}
           <div className="grid grid-cols-2 divide-x divide-gray-500 divide-opacity-50">
             {/* Left Panel */}
-            <div className="px-8 py-8 text-right">
+            <div className="md:px-8 px-2 py-8 text-right">
               <div className="first:pt-16 md:space-y-24 space-y-12">
                 <div>
                   <p>2022</p>
@@ -75,7 +75,7 @@ function Experiences({ setSelectedPage }: Props) {
               </div>
             </div>
             {/* Right Panel */}
-            <div className="px-8 py-8">
+            <div className="md:px-8 px-2 py-8">
               <div className="md:space-y-24 space-y-12">
                 <div>
                   <p>2023</p>
