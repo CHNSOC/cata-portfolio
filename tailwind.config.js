@@ -12,6 +12,9 @@ export default {
         nstc: ["Noto Serif TC", "sans-serif"],
         nssc: ["Noto Serif SC", "sans-serif"],
       },
+      backgroundImage: {
+        'exp-page-minimal-geo-bg': "url('/assets/Exp_Background.jpg')",
+      },
     },
     screens: {
       xs: "480px",

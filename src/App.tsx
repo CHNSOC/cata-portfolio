@@ -11,6 +11,7 @@ import Playfield from "@/scenes/playfield";
 import ErrorPage from "@/scenes/utility/ErrorPage";
 import AboutMe from "@/scenes/aboutme";
 import Footer from "@/scenes/footer/Footer";
+import Experiences from "./scenes/experiences";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} />
             <Home setSelectedPage={setSelectedPage} />
+            <Experiences setSelectedPage={setSelectedPage} />
             <Skills setSelectedPage={setSelectedPage} />
             <AboutMe setSelectedPage={setSelectedPage} />
             <Footer/>

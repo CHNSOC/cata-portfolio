@@ -65,8 +65,8 @@ const Home = ({ setSelectedPage }: Props) => {
                 <div className="mx-auto">
                     <div className="flex items-center justify-between gap-8">
                         <AnchorLink className="text-sm font-bold text-primary-500 hover:text-secondary-500"
-                            onClick={() => { setSelectedPage(SelectedPage.Skills) }}
-                            href={`#${SelectedPage.Skills}`}>
+                            onClick={() => { setSelectedPage(SelectedPage.Experiences) }}
+                            href={`#${SelectedPage.Experiences}`}>
                             <ArrowDownIcon className="h-6 w-6 text-primary-500" />
                         </AnchorLink>
                     </div>
