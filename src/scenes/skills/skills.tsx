@@ -63,7 +63,7 @@ const container = {
 function Skills({ setSelectedPage }: Props) {
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="skills" className="md:h-full h-auto py-32 px-12">
+    <section id="skills" className="md:h-full h-auto min-h-[1000px] py-32 px-12">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
       >
@@ -88,7 +88,7 @@ function Skills({ setSelectedPage }: Props) {
         </div>
       </motion.div>
       {isAboveMediumScreen ? (<motion.div
-        className="md:flex px-24 flex-row items-center justify-between gap-8 md:h-full"
+        className="md:flex px-24 flex-row items-center justify-between gap-8 md:h-full min-h-[700px]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
