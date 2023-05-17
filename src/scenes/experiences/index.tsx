@@ -30,7 +30,7 @@ function Experiences({ setSelectedPage }: Props) {
           </div>
           <div className="relative text-white md:text-3xl">
             <p>經驗 - Experiences</p>
-            <span className=" text-gray-300 text-sm ">The Neverending path</span>
+            <span className=" text-gray-300 text-sm ">The Neverending Path</span>
 
           </div>
         </div>
@@ -66,7 +66,7 @@ function Experiences({ setSelectedPage }: Props) {
                 </div>
                 <div>
                   <p>2020</p>
-                  <p>Individual columnist on Wechat subscription platform</p>
+                  <p>Individual columnist on the WeChat subscription platform</p>
                 </div>
                 <div>
                   <p>2018</p>
@@ -79,11 +79,11 @@ function Experiences({ setSelectedPage }: Props) {
               <div className="md:space-y-24 space-y-12">
                 <div>
                   <p>2023</p>
-                  <p>Full-stack Slash Engineer / Growth Seeker</p>
+                  <p>Full-Stack engineer / Growth seeker</p>
                 </div>
                 <div>
                   <p>2021</p>
-                  <p>Userscript Developer / Illustration Artist</p>
+                  <p>Userscript developer / Illustration artist</p>
                 </div>
                 <div>
                   <p>2019</p>
