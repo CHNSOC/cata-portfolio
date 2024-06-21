@@ -6,7 +6,7 @@ const Footer = () => {
             <div className='space-y-6 mt-16 basis-1/2 md:mt-0'>
                 <p className='my-5'>Designed by Catastasis</p>
                 <p>Powered by React TS and Tailwind.</p>
-                <p>© 2023 All Rights Reserved.</p>
+                <p>© 2077 All Rights Reserved.</p>
             </div>
             <div className='mt-16 basis-1/4 md:mt-0'>
                 <h4 className='font-bold'>Links</h4>
@@ -18,7 +18,6 @@ const Footer = () => {
                 <h4 className='font-bold'>Contact</h4>
                 <p className='my-5'><a href="mailto:CHNSOC@gmail.com"></a>CHNSOC@gmail.com</p>
                 
-                <p>(+66) 062 360 0038</p>
             </div>
         </div>
 
