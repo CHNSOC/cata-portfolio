@@ -84,7 +84,7 @@ function Skills({ setSelectedPage }: Props) {
       >
         <div>
           <p>技能 - Skills</p>
-          <span className=" text-gray-500 text-sm ">*Details are not availiable yet.</span>
+          <span className=" text-gray-500 text-sm ">You'll be redirected to another mainframe.</span>
         </div>
       </motion.div>
       {isAboveMediumScreen ? (<motion.div

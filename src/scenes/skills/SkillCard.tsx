@@ -26,7 +26,7 @@ function SkillCard({ icon, title, description, setSelectedPage }: Props) {
             <div className='w-auto h-auto border-spacing-2 border-gray-400 border-2 mt-auto py-4 mx-12 hover:bg-gray-100'>
                 <AnchorLink className="text-xl font-bold text-primary-500 underline hover:text-secondary-500"
                     onClick={() => { setSelectedPage(SelectedPage.Contact) }}
-                    href={`#${SelectedPage.Contact}`}>
+                    href={"https://csoc-homesite.vercel.app/netrunner"}>
                     <button className=''>Explore</button>
                 </AnchorLink>
             </div>
