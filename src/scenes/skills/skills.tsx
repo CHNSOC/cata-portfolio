@@ -29,11 +29,11 @@ const skillCards: Array<SkillCardType> = [
     description: <div className=" flex-col space-y-4">
       <div>
         <strong>Languages:</strong>
-        <p>Python, Java, C#, Typescript </p>
+        <p>Python, Java, C#, Javascript </p>
       </div>
       <div>
         <strong>Frameworks:</strong>
-        <p>React, Django, Tailwind </p>
+        <p>React, Django, Next.js </p>
       </div>
     </div>
   }, {
@@ -42,12 +42,12 @@ const skillCards: Array<SkillCardType> = [
     description:
       <div className=" flex-col space-y-4">
         <div>
-          <strong>Styles:</strong>
-          <p>Painting, 3D Modeling, Concept Painting</p>
+          <strong>Activities:</strong>
+          <p>Painting, 3D Modeling, Sketching</p>
         </div>
         <div>
           <strong>Tools:</strong>
-          <p>Photoshop, Premiere, Stable Diffusion </p>
+          <p>Photoshop, Blender, Stable Diffusion </p>
         </div>
       </div>
   },
