@@ -1,7 +1,6 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const childVariant = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -16,7 +15,7 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-function SkillCard({ icon, title, description, setSelectedPage }: Props) {
+function SkillCard({ icon, title, description }: Props) {
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
   return (
     <motion.div
